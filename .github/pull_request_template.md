@@ -17,10 +17,14 @@ Task source:
 Tests run:
 
 <!--
-Attribution is advisory for reporting. It does not block this PR.
+This section is mandatory for merging when the repository has the validate-ai-attribution check enabled.
 
-Examples:
-- Labels: ai-assisted, agent:claude, subagent:backend
-- Branch: agent/claude/backend/CD-123
-- Commit trailers: Agent, Subagents, Human owner, Task source
+If no AI was used, write:
+- AI used: no
+- Agent: none
+- Subagents: none
+
+If AI was used, name the tool and roles, for example:
+- Agent: claude
+- Subagents: backend, tests, reviewer
 -->
