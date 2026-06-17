@@ -7,18 +7,34 @@ Use this file as organization-level context when working in repositories owned b
 - GitHub work for this environment is limited to the `conceptualdynamic` organization.
 - Do not operate on personal repositories or other organizations unless explicitly configured elsewhere.
 
-## AI Attribution Rule
+## Required AI Attribution
 
-The AI attribution rule is advisory and non-blocking.
+Pull requests should declare attribution so contribution can be reported by human owner, AI tool, agent and subagent.
 
-Claude should not block pull requests, merges or reviews because attribution is missing. Instead, report missing attribution as pending traceability.
+Required PR body fields:
 
-When creating, reviewing or summarizing PRs, look for these signals:
+- `Human owner`
+- `AI used`
+- `Agent`
+- `Subagents`
+- `Task source`
+- `Tests run`
 
-- PR body fields: `Human owner`, `AI used`, `Agent`, `Subagents`, `Task source`, `Tests run`.
-- Labels: `ai-assisted`, `agent:claude`, `agent:codex`, `agent:copilot`, `subagent:backend`, `subagent:tests`.
-- Branches: `agent/claude/backend/CD-123`, `human/username/CD-125`.
-- Commit trailers: `Agent`, `Subagents`, `Human owner`, `Task source`.
+If no AI was used, use:
+
+```md
+AI used: no
+Agent: none
+Subagents: none
+```
+
+When AI was used, the agent and subagents must name the tool and roles used, for example:
+
+```md
+AI used: yes
+Agent: claude
+Subagents: backend, tests, reviewer
+```
 
 If `github-org-local` is available, use `github_agent_contribution_report` for team contribution reports. Separate people, agents, subagents and PRs without attribution.
 
