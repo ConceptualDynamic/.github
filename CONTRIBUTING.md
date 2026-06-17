@@ -1,17 +1,25 @@
 # Contribution Guidelines
 
-Conceptual Dynamic allows team members to open pull requests autonomously.
+Conceptual Dynamic requires pull requests to declare contribution attribution so team activity can be reported by person, AI tool, agent and subagent.
 
-AI attribution is advisory. It is used for reporting and learning how the team contributes, not to block pull requests or merges.
+The goal is measurement and traceability, not limiting who can open pull requests.
 
-When a pull request includes AI-assisted work, fill the Attribution section when possible:
+Every pull request should include:
 
 - Human owner: GitHub user responsible for the change.
 - AI used: yes or no.
-- Agent: for example Claude, Codex, Copilot, Cursor or another tool.
-- Subagents: for example backend, frontend, tests, reviewer or documentation.
+- Agent: Claude, Codex, Copilot, Cursor, another AI tool, or none.
+- Subagents: backend, frontend, tests, reviewer, documentation, none, or another role.
 - Task source: Planner task, GitHub issue, ticket, meeting follow-up or other source.
 - Tests run: checks or validation performed.
+
+If no AI was used, use:
+
+```md
+AI used: no
+Agent: none
+Subagents: none
+```
 
 Suggested labels:
 
@@ -38,5 +46,3 @@ Subagents: backend, tests
 Human owner: username
 Task source: planner/CD-123
 ```
-
-Missing attribution should be reported as pending traceability, not as a failure. Repository-specific rules may add stronger requirements later, but this organization default is intentionally non-blocking.
